@@ -1,0 +1,12 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-AdvancedSteamSessions-Win64-DebugGame.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"E:\Unreal Projects\Perforce\DeadByDaylight\Intermediate\Build\Win64\x64\DBDProjectEditor\DebugGame\UnrealEd\SharedPCH.UnrealEd.Project.NonOptimized.ValApi.Cpp20.h.obj"
+"E:\Unreal Projects\Perforce\DeadByDaylight\Plugins\AdvancedSteamSessions\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\AdvancedSteamSessions\Module.AdvancedSteamSessions.cpp.obj"
+"E:\Unreal Projects\Perforce\DeadByDaylight\Plugins\AdvancedSteamSessions\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\AdvancedSteamSessions\Default.rc2.res"
+/OUT:"E:\Unreal Projects\Perforce\DeadByDaylight\Plugins\AdvancedSteamSessions\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\AdvancedSteamSessions\UnrealEditor-AdvancedSteamSessions-Win64-DebugGame.lib"
