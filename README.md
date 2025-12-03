@@ -68,8 +68,8 @@ classDiagram
 *   **핵심 시스템**: Gameplay Ability System (GAS), 리플리케이션 (네트워킹)
 
 ## 📂 디렉토리 구조
-*   `Source/DBDProject/Private/MMJ`: 오브젝트 및 상호작용 로직의 핵심 구현부.
-*   `Source/DBDProject/Private/Shared/GameFramework`: 게임 모드 및 프레임워크 클래스.
+*   [`Source/DBDProject/Private/MMJ`](Source/DBDProject/Private/MMJ) : 오브젝트 및 상호작용 로직의 핵심 구현부.
+*   [`Source/DBDProject/Private/Shared/GameFramework`](Source/DBDProject/Private/Shared/GameFramework) : 게임 모드 및 프레임워크 클래스.
 
 ---
 *이 프로젝트는 교육 및 포트폴리오 목적으로 제작되었습니다.*
