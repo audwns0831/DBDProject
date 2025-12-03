@@ -14,13 +14,42 @@
     *   `IInteractable` 및 `IAbilitySystemInterface` 구현.
     *   스텐실 버퍼(Stencil Buffers)를 사용하여 생존자/살인마에게 오브젝트를 강조 표시하는 **오라(Aura) 시스템** 관리.
     *   오브젝트 가시성 및 상태 복제(Replication) 처리.
-    *   상호작용 중 정밀한 애니메이션 정렬을 위한 **모션 워핑(Motion Warping)** 지원.
 *   **상호작용 가능한 오브젝트**
     *   **발전기 (`Obj_Generator`)**: 수리 진행도 및 스킬 체크를 포함한 핵심 목표 메커니즘.
     *   **갈고리, 상자, 탈출구**: 각 상호작용 유형에 대한 고유 로직.
 *   **게임플레이 어빌리티 시스템 (GAS) 통합**
     *   **`UObjAbilitySystemComponent`**: "수리 진행도" 또는 "피해량"과 같은 속성을 처리하기 위한 오브젝트 전용 커스텀 ASC.
     *   **`UObjDataAsset`**: 오브젝트의 어빌리티와 속성을 쉽게 구성할 수 있는 데이터 기반 설계.
+
+```mermaid
+classDiagram
+    class IInteractable {
+        <<Interface>>
+    }
+    class IAbilitySystemInterface {
+        <<Interface>>
+    }
+    class ADBDObject {
+        +UObjAbilitySystemComponent* ASC
+        +GetAbilitySystemComponent()
+    }
+    class Obj_Generator {
+        +RepairProgress
+    }
+    class UObjAbilitySystemComponent {
+        +UObjDataAsset* DataAsset
+        +ProcessAttributeChange()
+    }
+    class UObjDataAsset {
+        +ObjectAttributes
+    }
+    
+    IInteractable <|.. ADBDObject
+    IAbilitySystemInterface <|.. ADBDObject
+    ADBDObject <|-- Obj_Generator
+    ADBDObject *-- UObjAbilitySystemComponent
+    UObjAbilitySystemComponent o-- UObjDataAsset
+```
 
 ### 2. 게임 프레임워크 (`Source/DBDProject/Private/Shared/GameFramework`)
 핵심 게임 루프와 세션 관리 로직을 구현했습니다.
@@ -36,7 +65,7 @@
 
 ## 🛠️ 기술 스택
 *   **엔진**: Unreal Engine 5 (C++ & Blueprints)
-*   **핵심 시스템**: Gameplay Ability System (GAS), 리플리케이션 (네트워킹), 모션 워핑
+*   **핵심 시스템**: Gameplay Ability System (GAS), 리플리케이션 (네트워킹)
 
 ## 📂 디렉토리 구조
 *   `Source/DBDProject/Private/MMJ`: 오브젝트 및 상호작용 로직의 핵심 구현부.
