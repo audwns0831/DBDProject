@@ -4,7 +4,7 @@
 
 
 ## 📖 프로젝트 개요
-이 프로젝트는 *Dead by Daylight*에서 영감을 받은 비대칭 멀티플레이어 서바이벌 호러 게임으로, **Unreal Engine 5.4**를 사용하여 개발되었습니다.
+이 프로젝트는 비대칭 멀티플레이어 서바이벌 호러 게임 *Dead by Daylight*를 모작한 프로젝트로, **Unreal Engine 5.4**를 사용하여 개발되었습니다.
 이 저장소는 팀 프로젝트 진행 중 제가 구현한 기능들의 소스 코드와 블루프린트를 포함하고 있습니다.
 
 ## 👨‍💻 담당 업무 및 기여도
@@ -65,7 +65,7 @@ classDiagram
     IAbilitySystemInterface <|.. ADBDObject
     ADBDObject *-- UInteractableComponent
     ADBDObject *-- UObjAbilitySystemComponent
-    UObjAbilitySystemComponent o-- UObjDataAsset
+    UObjAbilitySystemComponent *-- UObjDataAsset
 ```
 
 ### 2. 게임 프레임워크 ([`Source/DBDProject/Private/Shared/GameFramework`](Source/DBDProject/Private/Shared/GameFramework))
